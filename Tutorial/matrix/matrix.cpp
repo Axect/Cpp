@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int **Matrix(int m, int n) {
+int** Matrix(int m, int n) {
     int rows = m, cols = n;
     int i;
     int** array = new int*[rows];
