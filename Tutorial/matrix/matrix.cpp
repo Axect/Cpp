@@ -25,6 +25,11 @@ int main() {
     for (i=0;i<2;i++) {
         cout << Array[i][0] << " " << Array[i][1] << endl;
     }
+
+    for (i=0;i<2;i++) {
+        delete [] Array[i];
+    }
+
     return 0;
 }
 
