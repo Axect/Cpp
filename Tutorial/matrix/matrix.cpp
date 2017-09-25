@@ -15,18 +15,21 @@ int** Matrix(int m, int n) {
 }
 
 int main() {
-    int** Array = Matrix(2,2);
-    int i;
+    int rows=5, cols=5;
+    int** Array = Matrix(rows,cols);
+    int i,j;
 
-    Array[0][0] = 1;
-    Array[0][1] = 2;
-    Array[1][0] = 3;
-    Array[1][1] = 4;
-    for (i=0;i<2;i++) {
-        cout << Array[i][0] << " " << Array[i][1] << endl;
+    for (i=0;i<rows;i++) {
+        for (j=0; j<cols;j++) {
+            if (j==cols-1) {
+                cout << Array[i][j] << endl;
+            } else {
+                cout << Array[i][j] << " ";
+            }
+        }
     }
 
-    for (i=0;i<2;i++) {
+    for (i=0;i<rows;i++) {
         delete [] Array[i];
     }
 
