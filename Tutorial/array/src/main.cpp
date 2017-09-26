@@ -1,7 +1,3 @@
-#ifdef __TEST__
-#include <gtest/gtest.h>
-#endif
-
 #include <iostream>
 #include <time.h>
 
