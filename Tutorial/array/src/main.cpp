@@ -7,7 +7,7 @@ int main() {
     clock_t begin, end;
     begin = clock();
 
-    int * S = new int[100000000];
+    int* S = new int[100000000];
     long s = 0;
 
     for (int i; i < 1E+08; i++) {
