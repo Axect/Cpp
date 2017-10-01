@@ -11,7 +11,7 @@ int main() {
     int Length = 100000000;
     int* array = new int[Length];
 
-    for (i;i<Length;i++) {
+    for (i; i<Length; i++) {
         array[i] = i + 1;
     }
 
