@@ -12,7 +12,7 @@ class student {
         void Study();
         void Sleep();
         // Constructor 
-        student(char _name[], int _age, char _hobby[]) {
+        student(const char* _name, int _age, const char* _hobby) {
             name = _name;
             age = _age;
             hobby = _hobby;
