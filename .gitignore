@@ -2,4 +2,5 @@
 */bin/
 */**/data/
 .vscode
-.idea/ 제거할 예정
+.idea/ 
+*/**/.ipynb_checkpoints
