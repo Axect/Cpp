@@ -10,7 +10,8 @@ int main() {
     }
 
     for (int i = 0; i < 10; ++i) {
-        cout << y[i] << endl;
+        cout << *y << endl;
+        y++;
     }
 
     delete[] y;
