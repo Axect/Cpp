@@ -34,6 +34,10 @@ money operator+(const money& x, const money& y) {
     return m;
 }
 
+ostream& operator<<(ostream& os, const money& x) {
+    return os << "money: " << x.my_money();
+}
+
 int main() {
     cout << add(1, 2) << endl;
     cout << add(1.0, 2.0) << endl;
@@ -41,7 +45,7 @@ int main() {
     money m(13);
     money n(14);
 
-    cout << (m + n).get_money() << endl;
+    cout << m + n << endl;
 
     const money x(10);
     const int *p = &x.my_money();
