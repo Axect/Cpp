@@ -4,13 +4,15 @@
 
 using namespace std;
 
-struct Generator {
+class Generator {
+public:
     Generator(int n) : val(n) {}
     int operator()() {
         int old_val = val;
         val += 2;
         return old_val; 
     }
+private:
     int val;
 };
 
