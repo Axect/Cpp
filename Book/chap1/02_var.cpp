@@ -15,7 +15,7 @@
  *
  * =====================================================================================
  */
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -24,12 +24,14 @@ int main() {
     float pi = 3.14159;
     double x = -1.5e6;
     char c1 = 'a', c2 = 35;
-    bool cmp = i1 < pi,
-         happy = true;
+    bool cmp = i1 < pi, happy = true;
 
-    cout << i1 << endl << x << endl 
-        << c1 << endl << c2 << endl 
-        << cmp << endl << happy << endl;
+    cout << i1 << endl
+         << x << endl
+         << c1 << endl
+         << c2 << endl
+         << cmp << endl
+         << happy << endl;
     return 0;
 }
 

@@ -10,7 +10,7 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Axect (Tae Geun Kim), 
+ *         Author:  Axect (Tae Geun Kim),
  *   Organization:  Yonsei University
  *
  * =====================================================================================
