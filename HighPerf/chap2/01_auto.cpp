@@ -1,9 +1,20 @@
 #include <iostream>
-using namespace std;
 
-int main() {
+struct FooOriginal {
+    int val() const {
+        return m_;
+    }
 
-}
+    const int& cref() const {
+        return m_;
+    }
+
+    int& mref() {
+        return m_;
+    }
+
+    int m_{};
+};
 
 struct Foo {
     auto val() const {
@@ -20,8 +31,14 @@ struct Foo {
     int m_{};
 };
 
-auto func() {
+int main() {
     auto foo = Foo{};
-    auto& cref = foo.cref(); // cref is a const reference;
+    // auto& cref = foo.cref(); // It is also a const reference;
+    const auto& cref = foo.cref(); // cref is a const reference;
+    // cref = 3; // Can't mutate
+    std::cout << cref << std::endl;
     auto& mref = foo.mref(); // mref is a mutable reference;
+    mref = 3;
+    std::cout << foo.m_ << std::endl;
+    std::cout << cref << std::endl; // Since foo changed, cref is also changed
 }
