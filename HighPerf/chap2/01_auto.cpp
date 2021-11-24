@@ -33,11 +33,11 @@ struct Foo {
 
 int main() {
     auto foo = Foo{};
-    // auto& cref = foo.cref(); // It is also a const reference;
-    const auto& cref = foo.cref(); // cref is a const reference;
-    // cref = 3; // Can't mutate
+    // auto& cref = foo.cref();     // It is also a const reference;
+    const auto& cref = foo.cref();  // cref is a const reference;
+    // cref = 3;                    // Can't mutate
     std::cout << cref << std::endl;
-    auto& mref = foo.mref(); // mref is a mutable reference;
+    auto& mref = foo.mref();        // mref is a mutable reference;
     mref = 3;
     std::cout << foo.m_ << std::endl;
     std::cout << cref << std::endl; // Since foo changed, cref is also changed
