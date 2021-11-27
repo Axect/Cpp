@@ -33,12 +33,14 @@ public:
     // Move Constructor
     Buffer(Buffer&& other) noexcept
         : size_{other.size_}, ptr_{other.ptr_} {
+            std::cout << "Move Construction!" << std::endl;
             other.ptr_ = nullptr;
             other.size_ = 0;
         }
 
     // Move Assignment
     auto& operator=(Buffer&& other) noexcept {
+        std::cout << "Move Assignment!" << std::endl;
         ptr_ = other.ptr_;
         size_= other.size_;
         other.ptr_ = nullptr;
@@ -62,6 +64,9 @@ int main() {
     auto b1 = b0;
     b0 = b1;
     const auto& b2 = b1;
+
+    auto b3 = std::move(b1);
+    b3 = std::move(b0);
 
     return 0;
 }
